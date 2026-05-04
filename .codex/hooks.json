@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .codex/hooks/save_conversation.py",
+            "timeout": 30,
+            "statusMessage": "Saving user prompt"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .codex/hooks/save_conversation.py",
+            "timeout": 30,
+            "statusMessage": "Saving assistant response"
+          }
+        ]
+      }
+    ]
+  }
+}
